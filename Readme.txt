@@ -1,1 +1,2 @@
 上传SAE服务器时，请不要覆盖SAE上的config文件夹~
+根目录的sql请使用phpmyadmin导入~
