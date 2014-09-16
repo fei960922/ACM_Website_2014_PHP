@@ -20,7 +20,7 @@
 				$move = '+'.$ii.' day';
 				$date = date('Y-m-d',strtotime($move,strtotime('2014-09-11')));
 				$date_dis = $date.' （第'.$i.'周）';
-				echo '<input type="radio" name="times" value="'.$date.'"/>'.$date_dis.'<br />';
+				echo '<input type="radio" name="times" value="'.$i.'"/>'.$date_dis.'<br />';
 			}
 		?>
 	</div>

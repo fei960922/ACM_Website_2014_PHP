@@ -4,12 +4,14 @@
 	<caption>1</caption>
      <colgroup width="240"></colgroup>
      <colgroup width="240"></colgroup>
-     <colgroup width="300"></colgroup>
+     <colgroup width="150"></colgroup>
+     <colgroup width="150"></colgroup>
 <thead>
   <tr>
       <td>姓名</td>
       <td>学号</td>
       <td>选择时间</td>
+      <td>实际时间</td>
   </tr>
 </thead>
 <tbody>
@@ -17,7 +19,8 @@
 <tr>
 	<td><?php echo $f['name']; ?></td>
 	<td><?php echo $f['number']; ?></td>
-	<td><?php echo $f['time']; ?></td>
+	<td><?php echo $f['choose_date']; ?></td>
+  <td><?php echo $f['real_date']; ?></td>
 </tr>
 <?php endforeach ?>
 
