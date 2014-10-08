@@ -5,4 +5,4 @@
 	<div id = "headingDefault">
 		<?php include 'navigation.php';?>
 	</div>
-	<div class = "container">
+	<div class = "container_big">

@@ -6,6 +6,12 @@ class Welcome extends CI_Controller {
 		$data['title'] = 'Index';
 		$this->load->view('index.php',$data);
 	}
+	public function enroll()
+	{
+		$data['title'] = 'Index';
+		$this->load->view('index.php',$data);
+	}
+	
 }
 
 /* End of file welcome.php */

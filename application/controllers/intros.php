@@ -9,9 +9,29 @@ class Intros extends CI_Controller {
   public function index()
   {
     $data['title'] = 'Introduction';
-    
+    $this->load->view('templates/header_full',$data);
+    $this->load->view('intros/index');
+    $this->load->view('templates/footer');
+  }
+  public function classes()
+  {
+    $data['title'] = 'Class Introduction';
     $this->load->view('templates/header',$data);
-	$this->load->view('intros/index.php');
+    $this->load->view('intros/class');
+    $this->load->view('templates/footer');
+  }
+  public function teachers()
+  {
+    $data['title'] = 'Teachers';
+    $this->load->view('templates/header',$data);
+    $this->load->view('intros/teachers');
+    $this->load->view('templates/footer');
+  }
+  public function honor()
+  {
+    $data['title'] = 'Honor';
+    $this->load->view('templates/header',$data);
+    $this->load->view('intros/honor');
     $this->load->view('templates/footer');
   }
   public function students($grade = FALSE)
@@ -20,18 +40,23 @@ class Intros extends CI_Controller {
 	    $data['title'] = 'Students';
 	    $data['student'] = $this->intro_model->get_stu();
 	    $this->load->view('templates/header',$data);
-		$this->load->view('intros/stu_overall.php');
+		  $this->load->view('intros/index#');
 	    $this->load->view('templates/footer');  		
-  	} else {
+  	} else if ($grade == 'create') {
+      $data['title'] = 'Student Overall Create';
+      $this->load->view('templates/header_big',$data);
+      $this->load->view('intros/stu_create');
+      $this->load->view('templates/footer');      
+    } else {
   		$data['title'] = 'Students' + $grade;
     	$data['student'] = $this->intro_model->get_stu($grade);
- 	    $this->load->view('templates/header',$data);
-		$this->load->view('intros/stu_detail.php');
+ 	    $this->load->view('templates/header_big',$data);
+		  $this->load->view('intros/stu_detail.php');
 	    $this->load->view('templates/footer');     	  		
   	}
 
   }
-  public function create()
+  public function create()//Building
   {
     $this->load->library('form_validation');
     
